@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Combat from './Combat';
+import { Provider } from 'react-redux';
+import store from './store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+	<Provider store={store}>
+		<Combat />
+	</Provider>
+	, document.getElementById('root'));
